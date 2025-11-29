@@ -1,0 +1,43 @@
+{
+  "users": [
+    {
+      "id": "d5fe",
+      "name": "Praneetha",
+      "email": "example@gmail.com",
+      "password": "password"
+    },
+    {
+      "id": "a162",
+      "name": "Prayuktha",
+      "email": "example2@gmail.com",
+      "password": "password"
+    }
+  ],
+
+  "income": [
+    {
+      "id": "1636",
+      "userId": "d5fe",
+      "value": 1200000
+    }
+  ],
+
+  "expenses": [
+    {
+      "id": "3be2",
+      "title": "Food",
+      "amount": 3000,
+      "category": "Food",
+      "date": "2025-11-29T02:34:39.030Z",
+      "userId": "d5fe"
+    },
+    {
+      "id": "02f9",
+      "title": "Rent",
+      "amount": 10000,
+      "category": "Bills",
+      "date": "2025-11-29T02:34:54.082Z",
+      "userId": "d5fe"
+    }
+  ]
+}
