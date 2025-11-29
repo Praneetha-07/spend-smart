@@ -51,7 +51,7 @@ export default function Dashboard() {
     if (!currentUser) return;
     try {
       const res = await fetch(
-        `http://localhost:3000/income?userId=${currentUser.id}`
+        `https://spend-smart-5q63.onrender.com/income?userId=${currentUser.id}`
       );
       const data = await res.json();
       if (data.length > 0) {
@@ -71,7 +71,7 @@ export default function Dashboard() {
     if (!currentUser) return;
     try {
       const res = await fetch(
-        `http://localhost:3000/expenses?userId=${currentUser.id}`
+        `https://spend-smart-5q63.onrender.com/expenses?userId=${currentUser.id}`
       );
       const data = await res.json();
       setExpenses(
@@ -138,11 +138,14 @@ export default function Dashboard() {
     };
 
     try {
-      const res = await fetch("http://localhost:3000/expenses", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newExpense),
-      });
+      const res = await fetch(
+        "https://spend-smart-5q63.onrender.com/expenses",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(newExpense),
+        }
+      );
       const created = await res.json();
       setExpenses((prev) => [
         ...prev,
@@ -164,7 +167,7 @@ export default function Dashboard() {
   const deleteExpense = useCallback(
     async (id) => {
       try {
-        await fetch(`http://localhost:3000/expenses/${id}`, {
+        await fetch(`https://spend-smart-5q63.onrender.com/expenses/${id}`, {
           method: "DELETE",
         });
         setExpenses((prevExpenses) => prevExpenses.filter((e) => e.id !== id));
@@ -188,21 +191,27 @@ export default function Dashboard() {
     try {
       if (incomeId == null) {
         // No income record yet -> POST
-        const res = await fetch("http://localhost:3000/income", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ userId: currentUser.id, value: val }),
-        });
+        const res = await fetch(
+          "https://spend-smart-5q63.onrender.com/income",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ userId: currentUser.id, value: val }),
+          }
+        );
         const created = await res.json();
         setIncome(created.value || val);
         setIncomeId(created.id);
       } else {
         // Update existing income -> PUT
-        const res = await fetch(`http://localhost:3000/income/${incomeId}`, {
-          method: "PUT",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ userId: currentUser.id, value: val }),
-        });
+        const res = await fetch(
+          `https://spend-smart-5q63.onrender.com/income/${incomeId}`,
+          {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ userId: currentUser.id, value: val }),
+          }
+        );
         const updated = await res.json();
         setIncome(updated.value || val);
       }
@@ -220,20 +229,26 @@ export default function Dashboard() {
     try {
       // Delete income record for this user
       if (incomeId != null) {
-        await fetch(`http://localhost:3000/income/${incomeId}`, {
-          method: "DELETE",
-        });
+        await fetch(
+          `https://spend-smart-5q63.onrender.com/income/${incomeId}`,
+          {
+            method: "DELETE",
+          }
+        );
       }
 
       // Delete all expenses for this user
       const res = await fetch(
-        `http://localhost:5000/expenses?userId=${currentUser.id}`
+        `https://spend-smart-5q63.onrender.com/expenses?userId=${currentUser.id}`
       );
       const data = await res.json();
       for (const exp of data) {
-        await fetch(`http://localhost:3000/expenses/${exp.id}`, {
-          method: "DELETE",
-        });
+        await fetch(
+          `https://spend-smart-5q63.onrender.com/expenses/${exp.id}`,
+          {
+            method: "DELETE",
+          }
+        );
       }
 
       setIncome(0);

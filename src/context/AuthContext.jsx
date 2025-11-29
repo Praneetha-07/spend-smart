@@ -19,7 +19,7 @@ export function AuthProvider({ children }) {
 
   // Register user (POST)
   async function signup(name, email, password) {
-    const res = await fetch("http://localhost:3000/users", {
+    const res = await fetch("https://spend-smart-5q63.onrender.com/users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, password }),
@@ -30,8 +30,9 @@ export function AuthProvider({ children }) {
   // Login user (GET)
   async function login(email, password) {
     const res = await fetch(
-      `http://localhost:3000/users?email=${email}&password=${password}`
+      `https://spend-smart-5q63.onrender.com/users?email=${email}&password=${password}`
     );
+
     const data = await res.json();
 
     if (data.length === 0) throw new Error("Invalid credentials");
