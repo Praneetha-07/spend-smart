@@ -20,3 +20,9 @@ If you are developing a production application, we recommend using TypeScript wi
 **Code Demonstation Video:** https://drive.google.com/file/d/1A2AkwvvuMeVbDntrPj6pPmVV5uF9EaMi/view?usp=drive_link
 
 **Project Demo Link:** https://drive.google.com/file/d/1tuwMFZ7tH3UswqeYjXVIvyHnw62BfXEk/view?usp=sharing
+
+## 📄 Project Report
+You can view the full project report here:
+
+👉 [Spend Smart - Project Report](https://docs.google.com/document/d/1K0cp6R3SaXFraBY0pXQfAo6LghErorAo/edit?usp=drive_link&ouid=115678075632698356686&rtpof=true&sd=true)
+
