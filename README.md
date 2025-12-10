@@ -1,28 +1,73 @@
-# React + Vite
+# 💰 Spend Smart – Personal Expense Tracking Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Spend Smart is a clean, responsive, and user-friendly web application designed to help users track their daily expenses, visualize spending patterns, and manage budgets efficiently.  
+The app enables users to record transactions, categorize expenses, and view financial insights through intuitive charts.
 
-Currently, two official plugins are available:
+🔗 **Live Application:** https://spend-smart-coral.vercel.app  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ⭐ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🧾 Expense Management
+- Add, edit, and delete expenses  
+- Categorize expenses (Food, Travel, Bills, Shopping, etc.)  
+- View your spending history anytime  
 
-## Expanding the ESLint configuration
+### 📊 Analytics Dashboard
+- Visual charts showing spending trends  
+- Monthly & category-wise breakdown  
+- Helps users understand where their money is going  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🎯 Budget Tracking
+- Set monthly budgets  
+- Receive visual alerts when nearing the limit  
 
-🎥 **Video Explanation:**
+### 🌙 Clean UI / Responsive Design
+- Modern, minimalist interface  
+- Fully responsive (mobile + tablet + desktop)
 
-**Code Demonstation Video:** https://drive.google.com/file/d/1A2AkwvvuMeVbDntrPj6pPmVV5uF9EaMi/view?usp=drive_link
+---
 
-**Project Demo Link:** https://drive.google.com/file/d/1tuwMFZ7tH3UswqeYjXVIvyHnw62BfXEk/view?usp=sharing
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|-----------|----------|
+| **React.js** | Frontend UI development |
+| **Vite** | Fast development environment |
+| **CSS / Tailwind** | Styling & responsiveness |
+| **Local Storage** | Storing expense data locally |
+| **Vercel** | Deployment |
+
+---
+
+## 🎥 Video Explanation
+
+- **Code Demonstration Video:**  
+  https://drive.google.com/file/d/1A2AkwvvuMeVbDntrPj6pPmVV5uF9EaMi/view?usp=drive_link  
+
+- **Project Demo Video:**  
+  https://drive.google.com/file/d/1tuwMFZ7tH3UswqeYjXVIvyHnw62BfXEk/view?usp=sharing  
+
+---
 
 ## 📄 Project Report
-You can view the full project report here:
 
-👉 [Spend Smart - Project Report](https://docs.google.com/document/d/1K0cp6R3SaXFraBY0pXQfAo6LghErorAo/edit?usp=drive_link&ouid=115678075632698356686&rtpof=true&sd=true)
+👉 **[Spend Smart – Project Report](https://docs.google.com/document/d/1K0cp6R3SaXFraBY0pXQfAo6LghErorAo/edit?usp=drive_link&ouid=115678075632698356686&rtpof=true&sd=true)**  
 
+---
+
+## 🚀 How to Run Locally
+
+```bash
+# Clone the repository
+git clone https://github.com/Praneetha-07/spend-smart
+
+# Navigate into the project
+cd spend-smart
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
